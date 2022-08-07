@@ -1,0 +1,36 @@
+<body bgcolor=#87ceeb>
+ <center><br><br><br>
+  <font size=5>
+  <form action=__revert method=POST>
+   {% csrf_token %}
+   <input type=hidden name='id' value='{{y}}'>
+   Trnsaction_Id <input type=text name='tid' placeholder='Enter Id'><br>
+   <br><input type=submit name='revert' value='revert transaction'>
+  </form></font>
+  <form action=revert method=POST>
+   {% csrf_token %} 
+   <input type=hidden name='id' value='{{p}}'> 
+   <input type=hidden name='passwd' value='{{k}}'>  
+   <input type=submit name='cancel' value='cancel'>
+   </form>
+  <br><br><br>
+  <table border=1>
+   <tr>
+    <td><font size=5 color=white>Transaction_ID</font></td>
+    <td><font size=5 color=white>Sender To</font></td>
+    <td><font size=5 color=white>Amount received</font></td>
+    <td><font size=5 color=white>Status</font></td>
+    <td><font size=5 color=white>Date of Transaction</font></td>
+   </tr>  
+   {% for y in b %}
+    <tr>
+    <td><font size=3>{{y.transid}}</font></td>
+    <td><font size=3>{{y.receiver}}</font></td>
+    <td><font size=3>{{y.amt}}</font></td>
+    <td><font size=3>{{y.status}}</font></td>
+    <td><font size=3>{{y.dot}}</font></td>
+   </tr> 
+   {% endfor %}  
+  </table> 
+ </center>
+</body>

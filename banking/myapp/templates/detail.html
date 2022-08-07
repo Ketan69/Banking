@@ -1,0 +1,28 @@
+<body bgcolor=#87ceeb>
+ <center><br><br>
+  <font size=8>CUSTOMER DETAIL</font><br><br>
+  <font size=5>Customer_Id <input type=Text value='{{a.custid}}' readonly><br>
+  Name <input type=Text value='{{a.name}}' readonly><br>Balance <input type=Text value='{{a.balance}}' readonly><br>
+  Account_Open_Date <input type=Text value='{{d}}' readonly><br><br>
+  <form action=change method=POST>
+   {% csrf_token %} 
+   <input type=hidden name='id' value='{{a.custid}}'>
+   <input type=hidden name='passwd' value='{{a.passwd}}'>
+   <input type=submit name='cpasswd' value='Change Password'><br>
+  </form>
+  <form action=send method=POST>
+   {% csrf_token %}
+   <input type=hidden name='id' value='{{a.custid}}'>
+   <input type=hidden name='passwd' value='{{a.passwd}}'>
+   <input type=submit name='send' value='Send Money'><br>
+  </form>
+  <form action=transaction method=POST>
+   {% csrf_token %}
+   <input type=hidden name='id' value='{{a.custid}}'>
+   <input type=hidden name='passwd' value='{{a.passwd}}'> 
+   <input type=submit name='show' value='Show Transaction'>  
+  </form></font><br><br>
+  <a href='/'>logout</a>
+ </center>
+</body>  
+  

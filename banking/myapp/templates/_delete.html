@@ -1,0 +1,9 @@
+<body bgcolor=white>
+ Account deleted..
+ <form action=delete method=POST>
+  {% csrf_token %}
+  <input type=hidden name='id' value='{{p}}'>
+  <input type=hidden name='passwd' value='{{k}}'>
+  <input type=submit name='alogin' value='Go back'>
+ </form> 
+</body>

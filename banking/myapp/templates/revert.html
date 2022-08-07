@@ -1,0 +1,18 @@
+<body bgcolor=#87ceeb>
+ <center><br><br><br><br>
+  <font size=5>
+  <form action=_revert method=POST>
+   {% csrf_token %}
+   Customer_ID&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type=Text name='iid' placeholder='Enter Id'><br>
+   PASSWORD&nbsp<input type=Password name='ipasswd' placeholder='Enter Password'><br><br>
+   <input type=submit name='login' value='login'>
+  </form></font>
+  <form action=login method=POST>
+   {% csrf_token %}
+   <input type=hidden name='id' value='{{a}}'>
+   <input type=hidden name='passwd' value='{{b}}'>
+   <input type=submit name='alogin' value='back'>
+  </form>
+ </center>
+</body>
+  

@@ -1,0 +1,11 @@
+<body bgcolor=#87ceeb>
+ <center>
+  <font face size=5>
+  <form action=_update method=POST>
+   {% csrf_token %}
+   Customer_ID&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type=Text name='id' placeholder='Enter Id'><br>
+   PASSWORD&nbsp<input type=Password name='passwd' placeholder='Enter Password'><br><br>
+   <input type=submit name='update' value='Update'>
+  </form></font>
+ </center>
+</body>

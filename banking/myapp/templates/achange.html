@@ -1,0 +1,21 @@
+<body bgcolor=#87ceeb>
+ <center><br><br><br>
+  <font face size=5>
+  <form action=_change method=POST>
+   {% csrf_token %}
+   <input type=hidden name='id' value='{{a}}'>
+   <input type=hidden name='passwd' value='{{b}}'>
+   Enter ID&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type=Text name='cid' placeholder='Enter Id'><br>
+   New Password&nbsp<input type=Password name='ipasswd' placeholder='Enter Password'><br>
+   Re-Enter Password<input type=Password name='rpasswd' placeholder='Enter Password'><br><br>
+   <input type=submit>
+  </form></font>
+  <form action=login method=POST>
+   {% csrf_token %}
+   <input type=hidden name='id' value='{{a}}'>
+   <input type=hidden name='passwd' value='{{b}}'>
+   <input type=submit name='alogin' value='back'>
+  </form> 
+ </center>
+</body>
+  

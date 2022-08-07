@@ -1,0 +1,13 @@
+<body bgcolor=#87ceeb>
+ <font size=8>WELCOME TO WORLD BANK<font size=6>.com
+ (Jeevan ka saath bhi Jeevan k baad bhi)</font></font><br><br><br>
+ <center><font size=5>
+  <form action=login method=POST>
+   {% csrf_token %}
+   USER_ID&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type=Text name='id' placeholder='Enter Id'><br>
+   PASSWORD&nbsp<input type=Password name='passwd' placeholder='Enter Password'><br><br>
+   <input type=submit name='login' value='Login'><br><br>or<br>
+   <input type=submit name='alogin' value='admin_login'>
+  </form>
+ </center></font>
+</body>  

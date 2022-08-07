@@ -1,0 +1,18 @@
+<body bgcolor=#87ceeb>
+ <center><br><br><br><br>
+  <font face size=5>
+  <form action=_block method=POST>
+   {% csrf_token %}
+   <input type=hidden name='id' value='{{a}}'>
+   <input type=hidden name='passwd' value='{{b}}'>
+   Customer_ID&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type=Text name='iid' placeholder='Enter Id'><br>
+   PASSWORD&nbsp<input type=Password name='ipasswd' placeholder='Enter Password'><br><br>
+   <input type=submit name='block' value='Block'>
+  </form></font>
+  <form action=login method=POST>
+   {% csrf_token %}
+   <input type=hidden name='id' value='{{a}}'>
+   <input type=hidden name='passwd' value='{{b}}'>
+   <input type=submit name='alogin' value='back'>
+ </center>
+</body>

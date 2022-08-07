@@ -1,0 +1,9 @@
+<body bgcolor=white>
+ Password change Successfully..
+ <form action=login method=POST>
+  {% csrf_token %}
+  <input type=hidden name='id' value='{{a}}'>
+  <input type=hidden name='passwd' value='{{b}}'>
+  <input type=submit name='login' value='Go back'>
+ </form>
+</body>    

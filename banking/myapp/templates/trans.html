@@ -1,0 +1,64 @@
+<body bgcolor=#87ceeb>
+ <center>
+  <table border=1>
+   <tr>
+    <td><font size=5 color=white>Transaction_ID</font></td>
+    <td><font size=5 color=white>Send To</font></td>
+    <td><font size=5 color=white>Amount send</font></td>
+    <td><font size=5 color=white>Status</font></td>
+    <td><font size=5 color=white>Date of Transaction</font></td>
+   </tr>  
+   {% for x in a %}
+    <tr>
+    <td><font size=3>{{x.transid}}</font></td>
+    <td><font size=3>{{x.receiver}}</font></td>
+    <td><font size=3>{{x.amt}}</font></td>
+    <td><font size=3>{{x.status}}</font></td>
+    <td><font size=3>{{x.dot}}</font></td>
+   </tr> 
+   {% endfor %}
+   {% for y in d %}
+    <tr>
+    <td><font size=3>{{y.transid}}</font></td>
+    <td><font size=3>{{y.receiver}}</font></td>
+    <td><font size=3>{{y.amt}}</font></td>
+    <td><font size=3>{{y.status}}</font></td>
+    <td><font size=3>{{y.dot}}</font></td>
+   </tr> 
+   {% endfor %}
+  </table><br><br>
+  <table border=1>
+   <tr>
+    <td><font size=5 color=white>Transaction_ID</font></td>
+    <td><font size=5 color=white>Send By</font></td>
+    <td><font size=5 color=white>Amount received</font></td>
+    <td><font size=5 color=white>Status</font></td>
+    <td><font size=5 color=white>Date of Transaction</font></td>
+   </tr>  
+   {% for p in c %}
+    <tr>
+    <td><font size=3>{{p.transid}}</font></td>
+    <td><font size=3>{{p.sender}}</font></td>
+    <td><font size=3>{{p.amt}}</font></td>
+    <td><font size=3>{{p.status}}</font></td>
+    <td><font size=3>{{p.dot}}</font></td>
+   </tr> 
+   {% endfor %}
+   {% for q in b %}
+    <tr>
+    <td><font size=3>{{q.transid}}</font></td>
+    <td><font size=3>{{q.sender}}</font></td>
+    <td><font size=3>{{q.amt}}</font></td>
+    <td><font size=3>{{q.status}}</font></td>
+    <td><font size=3>{{q.dot}}</font></td>
+   </tr> 
+   {% endfor %} 
+  </table><br>
+  <form action=login method=POST>
+   {% csrf_token %}
+   <input type=hidden name='id' value='{{p}}'>
+   <input type=hidden name='passwd' value='{{k}}'>
+   <input type=submit name='login' value='back'>
+  </form>
+ </center>
+</body>

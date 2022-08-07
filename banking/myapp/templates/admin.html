@@ -1,0 +1,43 @@
+<body bgcolor=#87ceeb>
+ <center><br><br> 
+  <font size=8>WELCOME TO ADMIN PAGE</font><br><br>
+  <font size=5>
+  <form action=delete method=POST>
+   {% csrf_token %}
+   <input type=hidden name='id' value='{{z}}'>
+   <input type=hidden name='passwd' value='{{w}}'>
+   <input type=submit name='delete' value='Delete Account'><br>
+  </form>
+  <form action=new method=POST>
+   {% csrf_token %}
+   <input type=hidden name='id' value='{{z}}'>
+   <input type=hidden name='passwd' value='{{w}}'>
+   <input type=submit name='new' value='New Account'><br>
+  </form> 
+  <form action=update method=POST>
+   {% csrf_token %}
+   <input type=hidden name='id' value='{{z}}'>
+   <input type=hidden name='passwd' value='{{w}}'> 
+   <input type=submit name='update' value='Update Account'><br>
+  </form>
+  <form action=block method=POST>
+   {% csrf_token %}
+   <input type=hidden name='id' value='{{z}}'>
+   <input type=hidden name='passwd' value='{{w}}'>
+   <input type=submit name='block' value='Block Account'><br>
+  </form>
+  <form action=revert method=POST> 
+   {% csrf_token %}
+   <input type=hidden name='id' value='{{z}}'>
+   <input type=hidden name='passwd' value='{{w}}'>  
+   <input type=submit name='revert' value='Revert Transaction'><br>
+  </form>
+  <form action=change method=POST>
+   {% csrf_token %}
+   <input type=hidden name='id' value='{{z}}'>
+   <input type=hidden name='passwd' value='{{w}}'> 
+   <input type=submit name='change' value='Change Password'>
+  </form></font><br><br>
+  <a href='\'>logout</a>
+ </center>
+</body> 

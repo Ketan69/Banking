@@ -1,0 +1,20 @@
+<body bgcolor=#87ceeb>
+ <center>
+  <font face size=5>
+  <form action=_send method=POST>
+   {% csrf_token %}
+   <input type=hidden name='id' value='{{a}}'>
+   <input type=hidden name='passwd' value='{{b}}'>
+   Send Money_to&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type=Text name='rid' placeholder='Enter Id'><br>
+   Enter Amount&nbsp<input type=number name='amt' placeholder='Enter Amount'><br>
+   Enter Passcode&nbsp<input type=password name='code'><br><br>
+   <input type=submit name='send' value='Send Money'>
+  </form></font>  
+  <form action=login method=POST>
+   {% csrf_token %} 
+   <input type=hidden name='id' value='{{a}}'>
+   <input type=hidden name='passwd' value='{{b}}'>
+   <input type=submit name='login' value='back'>
+  </form> 
+ </center>
+</body> 
